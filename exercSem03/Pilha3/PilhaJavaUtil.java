@@ -6,7 +6,6 @@ public class PilhaJavaUtil {
         pilha.push(100);
         pilha.push(200);
         pilha.push(300);
-
         System.out.println("Topo da pilha: " + pilha.peek());
         System.out.println("Removendo: " + pilha.pop());
         System.out.println("Pilha atual: " + pilha);
