@@ -53,20 +53,20 @@ public class TesteListaString {
 
         ListaArrayString lista = new ListaArrayString(4);
 
-        // Adicionando nomes à lista
+        
         System.out.println("Digite 3 nomes para adicionar à lista:");
         for (int i = 0; i < 3; i++) {
             lista.adicionar(scanner.nextLine());
         }
         lista.imprimirLista();
 
-        // Remover um nome
+        
         System.out.println("Digite a posição do nome a ser removido:");
         int posicao = scanner.nextInt();
         lista.remover(posicao);
         lista.imprimirLista();
 
-        // Buscar um nome
+        
         scanner.nextLine(); // Limpar o buffer
         System.out.println("Digite um nome para buscar:");
         String nomeBusca = scanner.nextLine();
