@@ -8,7 +8,7 @@ class Pilha {
     public Pilha(int capacidade) {
         this.capacidade = capacidade;
         this.elementos = new int[capacidade];
-        this.topo = -1; // Indica pilha vazia
+        this.topo = -1;
     }
 
     public boolean isEmpty() {
@@ -58,17 +58,17 @@ public class TestePilha {
 
         Pilha pilha = new Pilha(5);
 
-        // Empilhando elementos
+        
         System.out.println("Digite 3 elementos para empilhar:");
         for (int i = 0; i < 3; i++) {
             pilha.push(scanner.nextInt());
         }
         pilha.imprimirPilha();
 
-        // Verificar topo da pilha
+       
         System.out.println("Topo da pilha: " + pilha.peek());
 
-        // Desempilhando um elemento
+       
         System.out.println("Desempilhando um elemento...");
         pilha.pop();
         pilha.imprimirPilha();
