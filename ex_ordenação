@@ -1,0 +1,55 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+class Produto {
+    int codigo;
+    String nome;
+    double valor;
+
+    // Construtor
+    public Produto(int codigo, String nome, double valor) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.valor = valor;
+    }
+
+    // Método para exibir informações do produto
+    @Override
+    public String toString() {
+        return "Código: " + codigo + ", Nome: " + nome + ", Valor: " + valor;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Passo 1: Criando um array de produtos
+        Produto[] produtos = {
+            new Produto(10, "Produto A", 30.5),
+            new Produto(3, "Produto B", 15.0),
+            new Produto(7, "Produto C", 22.5),
+            new Produto(1, "Produto D", 50.0),
+            new Produto(5, "Produto E", 12.0),
+            new Produto(2, "Produto F", 25.0),
+            new Produto(8, "Produto G", 19.0),
+            new Produto(6, "Produto H", 35.0),
+            new Produto(9, "Produto I", 40.0),
+            new Produto(4, "Produto J", 18.5)
+        };
+
+        // Passo 2A: Ordenar os produtos por código
+        Arrays.sort(produtos, Comparator.comparingInt(p -> p.codigo));
+        System.out.println("Produtos ordenados por código:");
+        for (Produto p : produtos) {
+            System.out.println(p);
+        }
+
+        System.out.println("\n");
+
+        // Passo 2B: Ordenar os produtos por valor
+        Arrays.sort(produtos, Comparator.comparingDouble(p -> p.valor));
+        System.out.println("Produtos ordenados por valor:");
+        for (Produto p : produtos) {
+            System.out.println(p);
+        }
+    }
+}
