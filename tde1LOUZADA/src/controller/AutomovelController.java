@@ -51,11 +51,11 @@ public class AutomovelController {
 	}
 
 	private Automovel buscarAutomovelPorPlaca(String placa) {
-		for (Automovel automovel : automoveis) {
-			if (automovel.getPlaca().equals(placa)) {
-				return automovel;
-			}
-		}
-		return null;
-	}
+    for (Automovel automovel : automoveis) {
+        if (automovel.getPlaca().trim().equalsIgnoreCase(placa.trim())) {
+            return automovel;
+        }
+    }
+    return null;
+}
 }
